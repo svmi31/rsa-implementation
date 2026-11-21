@@ -35,19 +35,17 @@ def dechiffrer(nombres, n, d):
 
 
 def envoyer_via_telegram(message_chiffre):
-    TOKEN = "8710232563:AAELgdicg1UygtdUJmux8w6dCFef54V_jYE"
 
-    CHAT_ID = "-5306638153"
     
     # Transforme la liste de nombres chiffrés en texte séparé par des espaces
     texte_chiffre = "".join(map(str, message_chiffre))
     
     # URL de l'API Telegram
-    url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+    url = f"https://api.telegram.org/bot{env.TOKEN_TEL}/sendMessage"
     
     # Données à envoyer
     payload = {
-        "chat_id": CHAT_ID,
+        "chat_id": env.CHAT_ID,
         "text": f" Message chiffré :\n{texte_chiffre}"
     }
     

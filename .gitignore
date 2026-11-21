@@ -1,0 +1,9 @@
+# Environnements Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Secrets et cles privees
+.env
+cle_privee.txt
